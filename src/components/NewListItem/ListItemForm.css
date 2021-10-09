@@ -1,0 +1,24 @@
+.new-item__control {
+  /* border: 2px solid black; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.new-item__control label {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.new-item__control input {
+  font: inherit;
+  padding: 0.1rem;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  width: 10rem;
+  max-width: 100%;
+}

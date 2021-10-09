@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import NewList from './components/NewList/NewList'
+import Lists from './components/List/Lists'
+import {useState} from 'react'
+
+const DUMMY_LIST_TITLE= []
 
 function App() {
+  const [listTitles, setListTitles] = useState(DUMMY_LIST_TITLE)
+
+  const addListTitleHandler = (enteredTitle) =>{
+    setListTitles(prevTitles => {
+      return [enteredTitle, ...prevTitles]
+    })
+  } 
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NewList onAddListTitle={addListTitleHandler}/>
+      <Lists ListTitles={listTitles}/>
     </div>
   );
 }

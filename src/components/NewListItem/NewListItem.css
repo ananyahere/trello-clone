@@ -1,0 +1,35 @@
+.newListItem{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.new-item__actions button {
+  width: 100%;
+  font: inherit;
+  cursor: pointer;
+  padding: 0.25rem 0.25rem;
+  border: 1px solid #40005d;
+  background-color: #40005d;
+  color: white;
+  border-radius: 6px;
+  margin-right: 1rem;
+}
+
+.new-item__actions button:hover,
+.new-item__actions button:active {
+  background-color: #510674;
+  border-color: #510674;
+}
+
+.new-item__actions button.alternative {
+  color: #220131;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.new-item button.alternative:hover,
+.new-item button.alternative:active {
+  background-color: #ddb3f8;
+}
